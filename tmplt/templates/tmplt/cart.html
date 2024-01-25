@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="multikart">
+    <meta name="keywords" content="multikart">
+    <meta name="author" content="multikart">
+    <link rel="icon" href="{% static 'tmplt/assets/images/favicon/1.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'tmplt/assets/images/favicon/1.png' %}" type="image/x-icon">
+    <title>CarvaMart - Multi-purpose E-commerce Html Template</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/font-awesome.css' %}">
+
+    <!--Slick slider css-->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/slick.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/slick-theme.css' %}">
+
+    <!-- Animate icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/animate.css' %}">
+
+    <!-- Themify icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/themify-icons.css' %}">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/bootstrap.css' %}">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/style.css' %}">
+
+</head>
+
+<body class="theme-color-1">
+
+
+    <!-- header start -->
+    {% include 'tmplt/header.html' with categories=categories %}
+    <!-- header end -->
+
+
+    <!-- breadcrumb start -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="page-title">
+                        <h2>cart</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">cart</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb End -->
+
+
+    <!--section start-->
+    <section class="cart-section section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="cart_counter">
+                    <!-- Your existing cart countdown and checkout button -->
+                </div>
+            </div>
+            <div class="col-sm-12 table-responsive-xs">
+                <table class="table cart-table" id="cart-table">
+                    <!-- Table head with column headers -->
+                    <thead>
+                        <!-- Your existing table head content -->
+                    </thead>
+                    <tbody id="cart-items">
+                        <!-- Cart items will be dynamically added here using JavaScript -->
+                    </tbody>
+                    <tfoot id="cart-total">
+                        <!-- Total price row will be dynamically added here using JavaScript -->
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <!-- Continue shopping and checkout buttons -->
+        <div class="row cart-buttons">
+            <div class="col-6"><a href="#" class="btn btn-solid">continue shopping</a></div>
+            <div class="col-6"><a href="#" class="btn btn-solid">check out</a></div>
+        </div>
+    </div>
+</section>
+
+    <!--section end-->
+
+
+    <!-- footer start -->
+    {% include 'tmplt/footer.html' with categories=categories %}
+    <!-- footer end -->
+
+
+   
+
+
+    <!-- tap to top start -->
+    <div class="tap-top">
+        <div><i class="fa fa-angle-double-up"></i></div>
+    </div>
+
+    <!-- latest jquery-->
+    <script src="{% static 'tmplt/assets/js/jquery-3.3.1.min.js'%}"></script>
+
+    <!-- menu js-->
+    <script src="{% static 'tmplt/assets/js/menu.js'%}"></script>
+
+    <!-- lazyload js-->
+    <script src="{% static 'tmplt/assets/js/lazysizes.min.js'%}"></script>
+
+    <!-- timer js-->
+    <script src="{% static 'tmplt/assets/js/timer1.js'%}"></script>
+
+    <!-- slick js-->
+    <script src="{% static 'tmplt/assets/js/slick.js'%}"></script>
+
+    <!-- Bootstrap js-->
+    <script src="{% static 'tmplt/assets/js/bootstrap.bundle.min.js'%}"></script>
+
+    <!-- Bootstrap Notification js-->
+    <script src="{% static 'tmplt/assets/js/bootstrap-notify.min.js'%}"></script>
+
+    <!-- Theme js-->
+    <script src="{% static 'tmplt/assets/js/theme-setting.js'%}"></script>
+    <script src="{% static 'tmplt/assets/js/script.js'%}"></script>
+
+    <script>
+        function openSearch() {
+            document.getElementById("search-overlay").style.display = "block";
+        }
+
+        function closeSearch() {
+            document.getElementById("search-overlay").style.display = "none";
+        }
+    </script>
+<script>
+    $(document).ready(function() {
+        // Function to fetch cart data from API and update the cart section
+        function updateCartSection() {
+            $.ajax({
+                type: 'GET',
+                url: '{% url 'cart_api' %}', // URL to your cart API
+                success: function(response) {
+                    var cartItemsHtml = '';
+                    var totalPrice = 0;
+
+                    // Loop through the cart items and create HTML for each item
+                    response.forEach(function(item) {
+                        cartItemsHtml += '<tr>';
+                        if (item.product) {
+                            // If product data is available
+                            cartItemsHtml += '<td><a href="#"><img src="' + item.product.image_url + '" alt=""></a></td>';
+                            cartItemsHtml += '<td><a href="#">' + item.product.name + '</a></td>';
+                            cartItemsHtml += '<td><h2>৳' + item.product.offer_price + '</h2></td>';
+                            cartItemsHtml += '<td><div class="qty-box"><div class="input-group"><input type="number" name="quantity" class="form-control input-number" value="' + item.quantity + '"></div></div></td>';
+                            cartItemsHtml += '<td><a href="#" class="icon"><i class="ti-close"></i></a></td>';
+                            cartItemsHtml += '<td><h2 class="td-color">৳' + (item.quantity * item.product.offer_price) + '</h2></td>';
+
+                            totalPrice += item.quantity * parseFloat(item.product.offer_price);
+                        } else {
+                            // If product data is not available
+                            cartItemsHtml += '<td colspan="6">Product details not available</td>';
+                        }
+                        cartItemsHtml += '</tr>';
+                    });
+
+                    // Update the cart items HTML
+                    $('#cart-items').html(cartItemsHtml);
+
+                    // Update the total price HTML
+                    $('#cart-total').html('<tr><td>total price :</td><td><h2>৳' + totalPrice.toFixed(2) + '</h2></td></tr>');
+                },
+                error: function(xhr, errmsg, err) {
+                    console.log(xhr.status + ': ' + xhr.responseText); // Log any errors
+                }
+            });
+        }
+
+        // Call the updateCartSection function when the page loads
+        updateCartSection();
+    });
+</script>
+
+
+</body>
+
+</html>

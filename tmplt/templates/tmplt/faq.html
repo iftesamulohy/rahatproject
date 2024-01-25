@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="multikart">
+    <meta name="keywords" content="multikart">
+    <meta name="author" content="multikart">
+    <link rel="icon" href="{% static 'tmplt/assets/images/favicon/1.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'tmplt/assets/images/favicon/1.png' %}" type="image/x-icon">
+    <title>CarvaMart - Multi-purpose E-commerce Html Template</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/font-awesome.css' %}">
+
+    <!--Slick slider css-->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/slick.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/slick-theme.css' %}">
+
+    <!-- Animate icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/animate.css' %}">
+
+    <!-- Themify icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/themify-icons.css' %}">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/bootstrap.css' %}">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/style.css' %}">
+
+</head>
+
+<body class="theme-color-1">
+
+
+    <!-- header start -->
+    {% include 'tmplt/header.html' with categories=categories %}
+    <!-- header end -->
+
+
+    <!-- breadcrumb start -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="page-title">
+                        <h2>faq</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">faq</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb end -->
+
+
+    <!--section start-->
+    <section class="faq-section section-b-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="accordion theme-accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0"><button class="btn btn-link" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">How
+                                        can I downgrade to an earlier version of Dummy Content?</button></h5>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>it look like readable English. Many desktop publishing packages and web page
+                                        editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                        ipsum' will uncover many web sites still in their infancy. Various versions have
+                                        evolved over the years,All the Lorem Ipsum generators on the Internet tend to
+                                        repeat predefined chunks as necessary, making this the first true generator on
+                                        the Internet. It uses a dictionary of over 200 Latin words, combined with a
+                                        handful of model sentence structures</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0"><button class="btn btn-link collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">How can I upgrade from Shopify 2.5 to shopify
+                                        3?</button></h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>it look like readable English. Many desktop publishing packages and web page
+                                        editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                        ipsum' will uncover many web sites still in their infancy. Various versions have
+                                        evolved over the years,All the Lorem Ipsum generators on the Internet tend to
+                                        repeat predefined chunks as necessary, making this the first true generator on
+                                        the Internet. It uses a dictionary of over 200 Latin words, combined with a
+                                        handful of model sentence structures</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0"><button class="btn btn-link collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">Under what license are Regular Labs extensions
+                                        released?</button></h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>it look like readable English. Many desktop publishing packages and web page
+                                        editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                        ipsum' will uncover many web sites still in their infancy. Various versions have
+                                        evolved over the years,All the Lorem Ipsum generators on the Internet tend to
+                                        repeat predefined chunks as necessary, making this the first true generator on
+                                        the Internet. It uses a dictionary of over 200 Latin words, combined with a
+                                        handful of model sentence structures</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0"><button class="btn btn-link collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">What is the Regular Labs Library?</button></h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>it look like readable English. Many desktop publishing packages and web page
+                                        editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                        ipsum' will uncover many web sites still in their infancy. Various versions have
+                                        evolved over the years,All the Lorem Ipsum generators on the Internet tend to
+                                        repeat predefined chunks as necessary, making this the first true generator on
+                                        the Internet. It uses a dictionary of over 200 Latin words, combined with a
+                                        handful of model sentence structures</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h5 class="mb-0"><button class="btn btn-link collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">Can I turn on/off some blocks on the page?</button>
+                                </h5>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>it look like readable English. Many desktop publishing packages and web page
+                                        editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                        ipsum' will uncover many web sites still in their infancy. Various versions have
+                                        evolved over the years,All the Lorem Ipsum generators on the Internet tend to
+                                        repeat predefined chunks as necessary, making this the first true generator on
+                                        the Internet. It uses a dictionary of over 200 Latin words, combined with a
+                                        handful of model sentence structures</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingSix">
+                                <h5 class="mb-0"><button class="btn btn-link collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
+                                        aria-controls="collapseSix">What is included in the theme package?</button></h5>
+                            </div>
+                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>it look like readable English. Many desktop publishing packages and web page
+                                        editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                        ipsum' will uncover many web sites still in their infancy. Various versions have
+                                        evolved over the years,All the Lorem Ipsum generators on the Internet tend to
+                                        repeat predefined chunks as necessary, making this the first true generator on
+                                        the Internet. It uses a dictionary of over 200 Latin words, combined with a
+                                        handful of model sentence structures</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section ends-->
+
+
+    <!-- footer start -->
+    {% include 'tmplt/footer.html' with categories=categories %}
+    <!-- footer end -->
+
+
+    
+
+
+    <!-- tap to top start -->
+    <div class="tap-top">
+        <div><i class="fa fa-angle-double-up"></i></div>
+    </div>
+    <!-- tap to top end -->
+
+
+    <!-- latest jquery-->
+    <script src="{% static 'tmplt/assets/js/jquery-3.3.1.min.js' %}"></script>
+
+    <!-- menu js-->
+    <script src="{% static 'tmplt/assets/js/menu.js' %}"></script>
+
+    <!-- lazyload js-->
+    <script src="{% static 'tmplt/assets/js/lazysizes.min.js' %}"></script>
+
+    <!-- slick js-->
+    <script src="{% static 'tmplt/assets/js/slick.js' %}"></script>
+
+    <!-- Bootstrap js-->
+    <script src="{% static 'tmplt/assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Bootstrap Notification js-->
+    <script src="{% static 'tmplt/assets/js/bootstrap-notify.min.js' %}"></script>
+
+    <!-- Theme js-->
+    <script src="{% static 'tmplt/assets/js/theme-setting.js' %}"></script>
+    <script src="{% static 'tmplt/assets/js/script.js' %}"></script>
+
+    <script>
+        function openSearch() {
+            document.getElementById("search-overlay").style.display = "block";
+        }
+
+        function closeSearch() {
+            document.getElementById("search-overlay").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

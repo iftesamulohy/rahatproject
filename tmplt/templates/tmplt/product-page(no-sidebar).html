@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="multikart">
+    <meta name="keywords" content="multikart">
+    <meta name="author" content="multikart">
+    <link rel="icon" href="{% static 'tmplt/assets/images/favicon/1.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'tmplt/assets/images/favicon/1.png' %}" type="image/x-icon">
+    <title>CarvaMart - Multi-purpose E-commerce Html Template</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/font-awesome.css' %}">
+
+    <!--Slick slider css-->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/slick.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/slick-theme.css' %}">
+
+    <!-- Animate icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/animate.css' %}">
+
+    <!-- Themify icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/themify-icons.css' %}">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/bootstrap.css' %}">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/style.css' %}">
+
+</head>
+
+<body class="theme-color-1">
+
+    <!-- loader start -->
+    <div class="loader_skeleton">
+        <header>
+            <div class="top-header d-none d-sm-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="header-contact">
+                                <ul>
+                                    <li>Welcome to Our store CarvaMart</li>
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i>Call Us: 123 - 456 - 7890</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-end">
+                            <ul class="header-dropdown">
+                                <li class="mobile-wishlist"><a href="#"><i class="fa fa-heart"
+                                            aria-hidden="true"></i></a>
+                                </li>
+                                <li class="onhover-dropdown mobile-account">
+                                    <i class="fa fa-user" aria-hidden="true"></i> My Account
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="main-menu">
+                            <div class="menu-left">
+                                <div class="navbar">
+                                    <a href="javascript:void(0)">
+                                        <div class="bar-style"><i class="fa fa-bars sidebar-bar"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="brand-logo">
+                                    <a href="index.html"><img src="{% static 'tmplt/assets/images/icon/logo.png' %}"
+                                            class="img-fluid blur-up lazyload" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="menu-right pull-right">
+                                <div>
+                                    <nav>
+                                        <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
+                                        <ul class="sm pixelstrap sm-horizontal">
+                                            <li>
+                                                <div class="mobile-back text-end">Back<i class="fa fa-angle-right ps-2"
+                                                        aria-hidden="true"></i></div>
+                                            </li>
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">feature<div class="lable-nav">new</div></a>
+                                            </li>
+                                            <li>
+                                                <a href="#">shop</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">product</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">pages</a>
+                                            </li>
+                                            <li><a href="#">blog</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div>
+                                    <div class="icon-nav d-none d-sm-block">
+                                        <ul>
+                                            <li class="onhover-div mobile-search">
+                                                <div><img src="{% static 'tmplt/assets/images/icon/search.png' %}" onclick="openSearch()"
+                                                        class="img-fluid blur-up lazyload" alt=""> <i class="ti-search"
+                                                        onclick="openSearch()"></i></div>
+                                            </li>
+                                            <li class="onhover-div mobile-setting">
+                                                <div><img src="{% static 'tmplt/assets/images/icon/setting.png' %}"
+                                                        class="img-fluid blur-up lazyload" alt=""> <i
+                                                        class="ti-settings"></i></div>
+                                            </li>
+                                            <li class="onhover-div mobile-cart">
+                                                <div><img src="{% static 'tmplt/assets/images/icon/cart.png' %}"
+                                                        class="img-fluid blur-up lazyload" alt=""> <i
+                                                        class="ti-shopping-cart"></i></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="breadcrumb-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="page-title">
+                            <h2>product</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">product</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="section-b-space ratio_asos">
+            <div class="collection-wrapper product-page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="main-product lg-img"></div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div class="sm-product"></div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="sm-product"></div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="sm-product"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="product-right">
+                                            <h2></h2>
+                                            <h4></h4>
+                                            <h3></h3>
+                                            <ul>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                            <div class="btn-group">
+                                                <div class="btn-ldr"></div>
+                                                <div class="btn-ldr"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="tab-product m-0">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-12">
+                                        <ul>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- loader end -->
+
+
+    <!-- header start -->
+    {% include 'tmplt/header.html' with categories=categories %}
+    <!-- header end -->
+
+
+    <!-- breadcrumb start -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="page-title">
+                        <h2>product</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">product</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb End -->
+
+
+    <!-- section start -->
+    <section>
+        <div class="collection-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="product-slick">
+                            {% for image in product.image.all %}
+                                <div><img src="{{image.image.url}}" alt=""
+                                    class="img-fluid blur-up lazyload image_zoom_cls-0"></div>
+                            
+                            {% endfor %}
+                            
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-12 p-0">
+                                <div class="slider-nav">
+                                {% for image in product.image.all %}
+                                <div><img src="{{image.image.url}}" alt=""
+                                            class="img-fluid blur-up lazyload"></div>
+                            
+                                {% endfor %}
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 rtl-text">
+                        <div class="product-right">
+                            {% comment %} <div class="product-count">
+                                <ul>
+                                    <li>
+                                        <img src="{% static 'tmplt/assets/images/fire.gif' %}" class="img-fluid" alt="image">
+                                        <span class="p-counter">37</span>
+                                        <span class="lang">orders in last 24 hours</span>
+                                    </li>
+                                    <li>
+                                        <img src="{% static 'tmplt/assets/images/person.gif' %}" class="img-fluid user_img" alt="image">
+                                        <span class="p-counter">44</span>
+                                        <span class="lang">active view this</span>
+                                    </li>
+                                </ul>
+                            </div> {% endcomment %}
+                            <h2>{{product.name}}</h2>
+                            
+                            <div class="label-section">
+                                <span class="badge badge-grey-color">{{product.category.first}}</span>
+                                <span class="label-text">{{product.category.first.sub_category.first}}</span>
+                            </div>
+                            <h3 class="price-detail">৳{{product.offer_price}} <del>৳{{product.price}}</del></h3>
+                            
+                            
+                            <div id="selectSize" class="addeffect-section product-description border-product">
+                                
+                                
+                                
+                            <h6 class="product-title">quantity</h6>
+                            <div class="qty-box">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field=""><i class="ti-angle-left"></i></button>
+                                    </span>
+                                    <input type="text" name="quantity" class="form-control input-number" value="1">
+                                    <span class="input-group-prepend">
+                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field=""><i class="ti-angle-right"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="product-buttons">
+                                <a href="javascript:void(0)" class="btn btn-solid hover-solid btn-animation add-to-cart"  data-product-id="{{ product.id }}"><i class="fa fa-shopping-cart me-1" aria-hidden="true"></i> add to cart</a>
+                                <a href="#" class="btn btn-solid"><i class="fa fa-bookmark fz-16 me-2" aria-hidden="true"></i>wishlist</a>
+                            </div>
+                            <div class="product-count">
+                                <ul>
+                                    <li>
+                                        <img src="{% static 'tmplt/assets/images/icon/truck.png' %}" class="img-fluid" alt="image">
+                                        <span class="lang">Free shipping for orders above ৳5000 BDT</span>
+                                    </li>
+                                </ul>
+                            </div>
+                           
+                            <div class="border-product">
+                                <h6 class="product-title">shipping info</h6>
+                                {{product.short_descriptions}}
+                            </div>
+                            <div class="border-product">
+                                <h6 class="product-title">share it</h6>
+                                <div class="product-icon">
+                                    <ul class="product-social">
+                                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border-product">
+                                <h6 class="product-title">100% secure payment</h6>
+                                <img src="{% static 'tmplt/assets/images/payment.png' %}" class="img-fluid mt-1" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section ends -->
+
+
+    <!-- product-tab starts -->
+    <section class="tab-product m-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                    <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" id="top-home-tab" data-bs-toggle="tab"
+                                href="#top-home" role="tab" aria-selected="true"><i
+                                    class="icofont icofont-ui-home"></i>Details</a>
+                            <div class="material-border"></div>
+                        </li>
+                        
+                        
+                        <li class="nav-item"><a class="nav-link" id="review-top-tab" data-bs-toggle="tab"
+                                href="#top-review" role="tab" aria-selected="false"><i
+                                    class="icofont icofont-contacts"></i>Write Review</a>
+                            <div class="material-border"></div>
+                        </li>
+                    </ul>
+                    <div class="tab-content nav-material" id="top-tabContent">
+                        <div class="tab-pane fade show active" id="top-home" role="tabpanel"
+                            aria-labelledby="top-home-tab">
+                            <div class="product-tab-discription">
+                                {{product.long_description}}
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="top-review" role="tabpanel" aria-labelledby="review-top-tab">
+                            {% if user.is_authenticated %}
+                                 <form class="theme-form" method="POST">
+                                 {% csrf_token %}
+                                    <div class="form-row row">
+                                        <div class="col-md-12">
+                                            
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <label for="review">Review Title</label>
+                                            <input type="text" class="form-control" id="review"
+                                                placeholder="Enter your Review Subjects" required name="title">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="review">Review Text</label>
+                                            <textarea class="form-control" placeholder="Wrire Your Testimonial Here"
+                                                id="exampleFormControlTextarea1" rows="6" name="text"></textarea>
+                                        </div>
+                                        <input type="hidden" name="product_id" value={{product.id}} >
+                                        <div class="col-md-12">
+                                            <button class="btn btn-solid" type="submit">Submit Your
+                                                Review</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            {% else %}
+                                <a href="" class="btn btn-solid" >Login</a>
+                            {% endif %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product-tab ends -->
+
+
+    <!-- product section start -->
+    
+    <!-- product section end -->
+
+
+    <!-- footer start -->
+    {% include 'tmplt/footer.html' with categories=categories %}
+    <!-- footer end -->
+
+
+    <!-- recently purchase product -->
+   
+    <!-- recently purchase product -->
+
+
+
+
+
+    <!-- Add to cart modal popup start-->
+    <div class="modal fade bd-example-modal-lg theme-modal cart-modal" id="addtocart" tabindex="-1" role="dialog"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body modal1">
+                    <div class="container-fluid p-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="modal-bg addtocart">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="media">
+                                        <a href="#">
+                                            <img class="img-fluid blur-up lazyload pro-img"
+                                                src="{% static 'tmplt/assets/images/fashion/product/43.jpg' %}" alt="">
+                                        </a>
+                                        <div class="media-body align-self-center text-center">
+                                            <a href="#">
+                                                <h6>
+                                                    <i class="fa fa-check"></i>Item
+                                                    <span>men full sleeves</span>
+                                                    <span> successfully added to your Cart</span>
+                                                </h6>
+                                            </a>
+                                            <div class="buttons">
+                                                <a href="#" class="view-cart btn btn-solid">Your cart</a>
+                                                <a href="#" class="checkout btn btn-solid">Check out</a>
+                                                <a href="#" class="continue btn btn-solid">Continue shopping</a>
+                                            </div>
+
+                                            <div class="upsell_payment">
+                                                <img src="{% static 'tmplt/assets/images/payment_cart.png' %}"
+                                                    class="img-fluid blur-up lazyload" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-section">
+                                        <div class="col-12 product-upsell text-center">
+                                            <h4>Customers who bought this item also.</h4>
+                                        </div>
+                                        <div class="row" id="upsell_product">
+                                            <div class="product-box col-sm-3 col-6">
+                                                <div class="img-wrapper">
+                                                    <div class="front">
+                                                        <a href="#">
+                                                            <img src="{% static 'tmplt/assets/images/fashion/product/1.jpg' %}"
+                                                                class="img-fluid blur-up lazyload mb-1"
+                                                                alt="cotton top">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-detail">
+                                                        <h6><a href="#"><span>cotton top</span></a></h6>
+                                                        <h4><span>$25</span></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-box col-sm-3 col-6">
+                                                <div class="img-wrapper">
+                                                    <div class="front">
+                                                        <a href="#">
+                                                            <img src="{% static 'tmplt/assets/images/fashion/product/34.jpg' %}"
+                                                                class="img-fluid blur-up lazyload mb-1"
+                                                                alt="cotton top">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-detail">
+                                                        <h6><a href="#"><span>cotton top</span></a></h6>
+                                                        <h4><span>$25</span></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-box col-sm-3 col-6">
+                                                <div class="img-wrapper">
+                                                    <div class="front">
+                                                        <a href="#">
+                                                            <img src="{% static 'tmplt/assets/images/fashion/product/13.jpg' %}"
+                                                                class="img-fluid blur-up lazyload mb-1"
+                                                                alt="cotton top">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-detail">
+                                                        <h6><a href="#"><span>cotton top</span></a></h6>
+                                                        <h4><span>$25</span></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-box col-sm-3 col-6">
+                                                <div class="img-wrapper">
+                                                    <div class="front">
+                                                        <a href="#">
+                                                            <img src="{% static 'tmplt/assets/images/fashion/product/19.jpg' %}"
+                                                                class="img-fluid blur-up lazyload mb-1"
+                                                                alt="cotton top">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-detail">
+                                                        <h6><a href="#"><span>cotton top</span></a></h6>
+                                                        <h4><span>$25</span></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add to cart modal popup end-->
+
+
+    <!-- sticky cart bottom start -->
+   
+    <!-- sticky cart bottom end -->
+
+
+    <!-- tap to top start -->
+    <div class="tap-top">
+        <div><i class="fa fa-angle-double-up"></i></div>
+    </div>
+    <!-- tap to top end -->
+
+
+    <!-- added to cart notification -->
+    
+    <!-- added to cart notification -->
+
+
+    <!-- latest jquery-->
+    <script src="{% static 'tmplt/assets/js/jquery-3.3.1.min.js' %}"></script>
+
+    <!-- menu js-->
+    <script src="{% static 'tmplt/assets/js/menu.js' %}"></script>
+
+    <!-- lazyload js-->
+    <script src="{% static 'tmplt/assets/js/lazysizes.min.js' %}"></script>
+
+    <!-- sticky cart bottom js-->
+    <script src="{% static 'tmplt/assets/js/sticky-cart-bottom.js' %}"></script>
+
+    <!-- slick js-->
+    <script src="{% static 'tmplt/assets/js/slick.js' %}"></script>
+
+    <!-- timer js-->
+    <script src="{% static 'tmplt/assets/js/timer.js' %}"></script>
+
+    <!-- Bootstrap js-->
+    <script src="{% static 'tmplt/assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Bootstrap Notification js-->
+    <script src="{% static 'tmplt/assets/js/bootstrap-notify.min.js' %}"></script>
+
+    <!-- Zoom js-->
+    <script src="{% static 'tmplt/assets/js/jquery.elevatezoom.js' %}"></script>
+
+    <!-- Theme js-->
+    <script src="{% static 'tmplt/assets/js/theme-setting.js' %}"></script>
+    <script src="{% static 'tmplt/assets/js/script.js' %}"></script>
+
+    <script>
+        function openSearch() {
+            document.getElementById("search-overlay").style.display = "block";
+        }
+
+        function closeSearch() {
+            document.getElementById("search-overlay").style.display = "none";
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.quantity-left-minus').click(function(e) {
+            e.preventDefault();
+            var quantity = parseInt($('input[name="quantity"]').val());
+            if (quantity > 1) {
+                $('input[name="quantity"]').val(quantity - 1);
+            }
+        });
+
+        $('.quantity-right-plus').click(function(e) {
+            e.preventDefault();
+            var quantity = parseInt($('input[name="quantity"]').val());
+            $('input[name="quantity"]').val(quantity + 1);
+        });
+
+        $('.add-to-cart').click(function(e) {
+            e.preventDefault();
+            var quantity = parseInt($('input[name="quantity"]').val());
+            var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+            var userId = "{{ request.user.id }}"; // Get the logged-in user's ID
+            var productId = $(this).data('product-id');// Get the product ID from data attribute
+            console.log(productId)
+
+            var data = {
+                quantity: quantity,
+                user: userId, // Include the logged-in user's ID
+                product: productId, // Include the product ID
+                csrfmiddlewaretoken: csrfToken
+            };
+
+            $.ajax({
+                type: 'POST',
+                url: '/api/cart/', // URL to your cart API
+                data: data,
+                success: function(response) {
+                    $('.product-count').text('Item added to cart!');
+                },
+                error: function(xhr, errmsg, err) {
+                    console.log(xhr.status + ': ' + xhr.responseText); // Log any errors
+                }
+            });
+        });
+    });
+</script>
+
+
+</body>
+
+</html>

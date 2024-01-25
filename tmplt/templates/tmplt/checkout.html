@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="multikart">
+    <meta name="keywords" content="multikart">
+    <meta name="author" content="multikart">
+    <link rel="icon" href="{% static 'tmplt/assets/images/favicon/1.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'tmplt/assets/images/favicon/1.png' %}" type="image/x-icon">
+    <title>CarvaMart - Multi-purpose E-commerce Html Template</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/font-awesome.css' %}">
+
+    <!--Slick slider css-->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/slick.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/slick-theme.css' %}">
+
+    <!-- Animate icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/animate.css' %}">
+
+    <!-- Themify icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/themify-icons.css' %}">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/vendors/bootstrap.css' %}">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tmplt/assets/css/style.css' %}">
+
+</head>
+
+<body class="theme-color-1">
+
+
+    <!-- header start -->
+    {% include 'tmplt/header.html' with categories=categories %}
+    <!-- header end -->
+
+    <!-- breadcrumb start -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="page-title">
+                        <h2>Check-out</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Check-out</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb End -->
+
+
+    <!-- section start -->
+    <section class="section-b-space">
+        <div class="container">
+            <div class="checkout-page">
+                <div class="checkout-form">
+                    <form method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 col-xs-12">
+            <div class="checkout-title">
+                <h3>Billing Details</h3>
+            </div>
+            <div class="row check-out">
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <div class="field-label">First Name</div>
+                    <input type="text" name="first_name" value="" placeholder="">
+                </div>
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <div class="field-label">Last Name</div>
+                    <input type="text" name="last_name" value="" placeholder="">
+                </div>
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <div class="field-label">Phone</div>
+                    <input type="text" name="phone" value="" placeholder="">
+                </div>
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <div class="field-label">Email Address</div>
+                    <input type="text" name="email" value="" placeholder="">
+                </div>
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <div class="field-label">Country</div>
+                    <select name="country">
+                        <option>India</option>
+                        <option>South Africa</option>
+                        <option>United States</option>
+                        <option>Australia</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <div class="field-label">Address</div>
+                    <input type="text" name="address" value="" placeholder="Street address">
+                </div>
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <div class="field-label">Town/City</div>
+                    <input type="text" name="city" value="" placeholder="">
+                </div>
+                <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                    <div class="field-label">State / County</div>
+                    <input type="text" name="state" value="" placeholder="">
+                </div>
+                <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                    <div class="field-label">Postal Code</div>
+                    <input type="text" name="postal_code" value="" placeholder="">
+                </div>
+                <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                    <div class="field-label">Payment Number</div>
+                    <input type="text" name="payment_number" value="" placeholder="If any">
+                </div>
+                <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                    <div class="field-label">TRX Id</div>
+                    <input type="text" name="trx_id" value="" placeholder="If any">
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input type="checkbox" name="create_account" id="account-option"> &ensp;
+                    <label for="account-option">Create An Account?</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 col-xs-12">
+            <div class="checkout-details">
+                <div class="order-box">
+                    <div class="title-box">
+                        <div>Product <span>Total</span></div>
+                    </div>
+                    <ul class="qty">
+                        <li>Pink Slim Shirt × 1 <span>$25.10</span></li>
+                        <li>SLim Fit Jeans × 1 <span>$555.00</span></li>
+                    </ul>
+                    <ul class="sub-total">
+                        <li>Subtotal <span class="count">$380.10</span></li>
+                        <li>Shipping
+                            <div class="shipping">
+                                <div class="shopping-option">
+                                    <input type="checkbox" name="free_shipping" id="free-shipping">
+                                    <label for="free-shipping">Free Shipping</label>
+                                </div>
+                                <div class="shopping-option">
+                                    <input type="checkbox" name="local_pickup" id="local-pickup">
+                                    <label for="local-pickup">Local Pickup</label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="total">
+                        <li>Total <span class="count">$620.00</span></li>
+                    </ul>
+                </div>
+                <div class="payment-box">
+                    <div class="upper-box">
+                        <div class="payment-options">
+                            <ul>
+                                <li>
+                                    <div class="radio-option">
+                                        <input type="radio" name="payment_group" id="payment-1" checked="checked">
+                                        <label for="payment-1">Cash on Delivery<span class="small-text">Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="radio-option">
+                                        <input type="radio" name="payment_group" id="payment-2">
+                                        <label for="payment-2">Bkash<span class="small-text">Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="radio-option paypal">
+                                        <input type="radio" name="payment_group" id="payment-3">
+                                        <label for="payment-3">Nagad<span class="image"></span></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="radio-option paypal">
+                                        <input type="radio" name="payment_group" id="payment-4">
+                                        <label for="payment-4">Rocket<span class="image"></span></label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-end"><button type="submit" class="btn-solid btn">Place Order</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section end -->
+
+
+    <!-- footer start -->
+    {% include 'tmplt/footer.html' with categories=categories %}
+    <!-- footer end -->
+
+
+    
+
+
+    <!-- tap to top start -->
+    <div class="tap-top">
+        <div><i class="fa fa-angle-double-up"></i></div>
+    </div>
+    <!-- tap to top end -->
+
+
+    <!-- latest jquery-->
+    <script src="{% static 'tmplt/assets/js/jquery-3.3.1.min.js' %}"></script>
+
+    <!-- menu js-->
+    <script src="{% static 'tmplt/assets/js/menu.js' %}"></script>
+
+    <!-- lazyload js-->
+    <script src="{% static 'tmplt/assets/js/lazysizes.min.js' %}"></script>
+
+    <!-- slick js-->
+    <script src="{% static 'tmplt/assets/js/slick.js' %}"></script>
+
+    <!-- Bootstrap js-->
+    <script src="{% static 'tmplt/assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Bootstrap Notification js-->
+    <script src="{% static 'tmplt/assets/js/bootstrap-notify.min.js' %}"></script>
+
+    <!-- Theme js-->
+    <script src="{% static 'tmplt/assets/js/theme-setting.js' %}"></script>
+    <script src="{% static 'tmplt/assets/js/script.js' %}"></script>
+
+    <script>
+        function openSearch() {
+            document.getElementById("search-overlay").style.display = "block";
+        }
+
+        function closeSearch() {
+            document.getElementById("search-overlay").style.display = "none";
+        }
+    </script>
+   <script>
+    $(document).ready(function () {
+        // Function to fetch order box price from cart API and update HTML
+        function updateOrderBox() {
+            $.ajax({
+                type: 'GET',
+                url: '/api/cart/', // URL to your cart API
+                success: function (response) {
+                    var orderBoxHtml = '';
+                    var subtotal = 0;
+
+                    // Loop through the cart items and calculate subtotal
+                    response.forEach(function (item) {
+                        orderBoxHtml += '<li>' + item.product.name + ' × ' + item.quantity + ' <span>৳' + (item.quantity * item.product.offer_price).toFixed(2) + '</span></li>';
+                        subtotal += item.quantity * parseFloat(item.product.offer_price);
+                    });
+
+                    // Update subtotal in the order box
+                    $('.sub-total .count').text('৳' + subtotal.toFixed(2));
+
+                    // Calculate total amount including shipping if needed
+                    var total = subtotal;
+                    // Add shipping cost to the total if applicable
+                    if ($('#free-shipping').is(':checked')) {
+                        // Free shipping selected, no additional cost
+                    } else if ($('#local-pickup').is(':checked')) {
+                        // Local pickup selected, no additional cost
+                    } else {
+                        // Add shipping cost here if applicable
+                    }
+
+                    // Update total amount in the order box
+                    $('.total .count').text('৳' + total.toFixed(2));
+
+                    // Update the order box HTML
+                    $('.qty').html(orderBoxHtml);
+                },
+                error: function (xhr, errmsg, err) {
+                    console.log(xhr.status + ': ' + xhr.responseText); // Log any errors
+                }
+            });
+        }
+
+        // Call the updateOrderBox function when the page loads
+        updateOrderBox();
+    });
+</script>
+</body>
+
+</html>
